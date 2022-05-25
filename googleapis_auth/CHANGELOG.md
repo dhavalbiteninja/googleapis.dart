@@ -1,11 +1,3 @@
-## 1.3.2-dev
-
-- Require Dart 2.14 or later.
-
-## 1.3.1
-
-- Include `plugin_name` during browser authorization.
-
 ## 1.3.0
 
 - The `secret` param in `ClientId` constructor is now optional.

@@ -95,7 +95,7 @@ class AutoRefreshingClient extends AutoRefreshDelegatingClient {
     bool closeUnderlyingClient = true,
     this.quotaProject,
   })  : assert(credentials.accessToken.type == 'Bearer'),
-        assert(credentials.refreshToken != null),
+        //assert(credentials.refreshToken != null),
         super(client, closeUnderlyingClient: closeUnderlyingClient) {
     authClient = AuthenticatedClient(
       baseClient,

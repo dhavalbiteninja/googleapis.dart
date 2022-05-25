@@ -147,7 +147,6 @@ class ImplicitFlow {
       if (hostedDomain != null) 'hosted_domain': hostedDomain,
       if (loginHint != null) 'login_hint': loginHint,
       // include_granted_scopes - missing
-      'plugin_name': 'dart-googleapis_auth',
     };
 
     _gapiAuth2.callMethod('authorize', [
@@ -254,7 +253,7 @@ String _responseTypeToString(ResponseType responseType) {
 /// More specifically, the script has the correct `nonce` value set.
 final html.ScriptElement Function() _createScript = (() {
   final nonce = _getNonce();
-  if (nonce == null) return html.ScriptElement.new;
+  if (nonce == null) return () => html.ScriptElement();
 
   return () => html.ScriptElement()..nonce = nonce;
 })();

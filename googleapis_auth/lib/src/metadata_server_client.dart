@@ -41,6 +41,6 @@ Future<AutoRefreshingAuthClient> clientViaMetadataServer({
   Client? baseClient,
 }) async =>
     await clientFromFlow(
-      MetadataServerAuthorizationFlow.new,
+      (c) => MetadataServerAuthorizationFlow(c),
       baseClient: baseClient,
     );
